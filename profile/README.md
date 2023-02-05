@@ -104,7 +104,7 @@ it may appear on a subsequent line by itself
 
 # Getting started
 
-See the [Getting Started Guide](GETTING_STARTED.md) for info on setting up an Eclipse development environment. It will take you all the way to a working demo.
+See the [Getting Started Guide](GETTING-STARTED.md) for info on setting up an Eclipse development environment. It will take you all the way to a working demo.
 
 Note that this repo depends on the [UDDL Query](https://github.com/Epistimis/com.epistimis.uddl.query.parent) repo. You'll need to include that in your workspace for the build to succeed.
 
