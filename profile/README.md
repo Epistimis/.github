@@ -15,17 +15,17 @@ here referencing the ones you'll need to know.
 
 For now, the parts that matter for our purposes are:
 UDDL - the entire document:
-* com.epistimis.uddl.parent and its subprojects implement Chapters 5,7, and 8 of that spec.
-* com.epistimis.uddl.query.parent and its subprojects implement Chapter 6 of that spec.
-To properly understand those implementations, you'll want to read chapters 2 & 3.
+* [UDDL](https://github.com/Epistimis/UDDL) implements Chapters 5,7, and 8 of that spec.
+* [UDDL Query Language](https://github.com/Epistimis/UDDL-Query-Language) implements Chapter 6 of that spec.
+To properly understand those implementations, you'll want to read chapters 2 & 3 of the spec as well.
 
 FACE - Appendix J
-* com.epistimis.face.parent and its subprojects implement Meta-Packages face.uop & face.integration (J.2, J.5, J.6, J.7)
-* com.epistimis.face.template.parent and its subprojects implement the Data Architecture Template Specification (J.3, J.4)
+* [FACE](https://github.com/Epistimis/FACE) implements Meta-Packages face.uop & face.integration (J.2, J.5, J.6, J.7)
+* [FACE Template Language](https://github.com/Epistimis/FACE-Template-Language) implements the Data Architecture Template Specification (J.3, J.4)
 We will also incorporate Safety and Security (Chapters 5,6)
 
-The IDL Bindings described in Appendix J.8 and Appendix K apply to both UDDL and FACE. Read the legend at the beginning of the appendix and then search by
-the classname (as used in the FACE/UDDL specs, not the classname as implemented in Epistimis' code) to find relevant binding rules.
+The IDL Bindings described in Appendix J.8 and Appendix K apply to both UDDL and FACE. Read the legend at the beginning of the appendix and then 
+search by the classname (as used in the FACE/UDDL specs, not the classname as implemented in Epistimis' code) to find relevant binding rules.
 
 Note that the FACE Reference Implementation Guide should also be referenced. When it is published, a link to it will be provided here.
 
