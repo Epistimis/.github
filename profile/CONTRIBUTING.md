@@ -1,3 +1,7 @@
+## Contributing
+First off, thank you for considering contributing to these modeling tools. It's people
+like you that make them great.
+
 ## What you can contribute
 1. Documentation - Documentation (developer, user, etc.) is the primary mechanism for scalable knowledge transfer. 
 N00bs in particular are ***strongly*** encouraged to contribute to documentation efforts. Why, you ask? Because, as a n00b, 
@@ -18,7 +22,131 @@ review and edit the same information. It could be in textual format, graphical, 
 there is lots of opportunity for you here.
 5. Other? It is certainly possible that there are even more opportunities. If you think something is missing, don't hesitate to get involved adding it.
 
+## How to contribute
+### Where do I go from here?
 
+If you've noticed a bug or have a feature request, [make one][new issue]! It's
+generally best if you get confirmation of your bug or approval for your feature
+request this way before starting to code.
+
+If you have a general question about these tools, you can post it on [Stack
+Overflow], the issue tracker is only for bugs and feature requests.
+
+### Fork & create a branch
+
+If this is something you think you can fix, then [fork the appropriate repo] and create
+a branch with a descriptive name.
+
+A good branch name would be (where issue #325 is the ticket you're working on):
+
+```sh
+git checkout -b 325-add-japanese-translations
+```
+
+### Get the test suite running
+
+See the [Getting Started Guide](GETTING-STARTED.md) for details on getting set up for development.
+Make sure to go all the way through the build process to make sure you're completely set up.
+
+
+### Implement your fix or feature
+
+At this point, you're ready to make your changes! Feel free to ask for help;
+everyone is a beginner at first :smile_cat:
+
+
+### View your changes in a running application
+
+These tools are meant to be used by humans, not cucumbers. So make sure to take
+a look at your changes in an editor.
+
+### Get the style right
+
+Your patch should follow the same conventions & pass the same code quality
+checks as the rest of the project. 
+
+### Make a Pull Request
+At this point, you should switch back to your master branch and make sure it's
+up to date with the Epstimis repo's master branch:
+
+```sh
+git remote add upstream git@github.com:epistimis/com.epistims.uddl.parent.git
+git checkout master
+git pull upstream master
+```
+
+Then update your feature branch from your local copy of master, and push it!
+
+```sh
+git checkout 325-add-japanese-translations
+git rebase master
+git push --set-upstream origin 325-add-japanese-translations
+```
+
+Finally, go to GitHub and [make a Pull Request][] :D
+
+Github Actions will run our test suite against all supported versions. We
+care about quality, so your PR won't be merged until all tests pass. It's
+unlikely, but it's possible that your changes pass tests in one version
+but fail in another. In that case, you'll have to setup your development
+environment (as explained in step 3) to use the problematic version, and
+investigate what's going on!
+
+### Keeping your Pull Request updated
+
+If a maintainer asks you to "rebase" your PR, they're saying that a lot of code
+has changed, and that you need to update your branch so it's easier to merge.
+
+To learn more about rebasing in Git, there are a lot of [good][git rebasing]
+[resources][interactive rebase] but here's the suggested workflow:
+
+```sh
+git checkout 325-add-japanese-translations
+git pull --rebase upstream master
+git push --force-with-lease 325-add-japanese-translations
+```
+
+### Merging a PR (maintainers only)
+
+A PR can only be merged into master by a maintainer if:
+
+* It is passing CI.
+* It has been approved by at least two maintainers. If it was a maintainer who
+  opened the PR, only one extra approval is needed.
+* It has no requested changes.
+* It is up to date with current master.
+
+Any maintainer is allowed to merge a PR if all of these conditions are
+met.
+
+### Shipping a release (maintainers only)
+
+Maintainers need to do the following to push out a release:
+
+* Switch to the master branch and make sure it's up to date.
+* Make sure you have [chandler] properly configured. Chandler is used to
+  automatically submit github release notes from the changelog.
+<!--  
+* Run one of `bin/rake release:prepare_{prerelease,prepatch,patch,preminor,minor,premajor,major}`, push the result and create a PR.
+-->
+* Review and merge the PR. The generated changelog in the PR should include all user visible changes you intend to ship.
+<!-- 
+* Run `bin/rake release` from the target branch once the PR is merged.
+-->
+
+[chandler]: https://github.com/mattbrictson/chandler#2-configure-credentials
+[Stack Overflow]: http://stackoverflow.com/questions/tagged/epistimis
+[new issue]: https://github.com/epistimis/com.epistimis.uddl.parent/issues/new
+[fork an Epistimis repo]: https://help.github.com/articles/fork-a-repo
+[make a pull request]: https://help.github.com/articles/creating-a-pull-request
+[git rebasing]: http://git-scm.com/book/en/Git-Branching-Rebasing
+[interactive rebase]: https://help.github.com/en/github/using-git/about-git-rebase
+[shortcut reference links]: https://github.github.com/gfm/#shortcut-reference-link
+<!--
+[Rollup]: https://rollupjs.org/guide/en/#quick-start
+[Yarn]: https://yarnpkg.com/en/docs/install
+[Node.js]: https://nodejs.org/en/
+-->
 ### Commits in your pull-requests should
 
 - Have a useful description prefixed with the package name (E.g.: "foopkg: Add
@@ -80,13 +208,6 @@ commenting and amending the proposed changes.
 
 ## Release Branches
 
-- Old stable branches were named after the following pattern "for-XX.YY" (e.g.
-  for-14.07) before the LEDE split.  During the LEDE split there was only one
-  release branch with the name "lede-17.01".  After merging the LEDE fork with
-  OpenWrt the release branches are named according to the following pattern
-  "openwrt-XX.YY" (e.g. openwrt-18.06).
-- These branches are built with the respective OpenWrt release and are created
-  during the release stabilisation phase.
 - Please ONLY cherry-pick or commit security and bug-fixes to these branches.
 - Do NOT add new packages and do NOT do major upgrades of packages here.
 - If you are unsure if your change is suitable, please use a pull request.
