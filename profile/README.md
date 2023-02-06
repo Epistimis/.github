@@ -38,7 +38,7 @@ than that, it should be functionally equivalent.
 
 The UDDL Query and FACE Template grammars are the same as the spec - those are isolated in `com.epistimis.uddl.query.*` and `com.epistimis.face.template.*` respectively.
 The syntax used in the `com.epistimis.uddl.*` and `com.epistimis.face.*` projects is Epistimis` alone - it is not part of the 'official' 
-UDDL spec.  The syntax choices in these projects are based on following philosophy:
+UDDL spec.  The syntax choices in these projects are based on the philosophy outlined in the Notation Overview below.
 
 # Motivational Overview - Why These Tools?
 *Learning to program is an unnatural act. It requires the novice to codify their notions of specification and process, to acquire an understanding of abstractions for which they may have no prior referents, and to express these concepts in a formal style of language they have never previously encountered. In other words, it is like trying to alter their belief system by quoting theoretical philosophy to them in hieroglyphics. (McIver & Conway)*
