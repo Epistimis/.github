@@ -17,15 +17,17 @@ For now, the parts that matter for our purposes are:
 UDDL - the entire document:
 * [UDDL](https://github.com/Epistimis/UDDL) implements Chapters 5,7, and 8 of that spec.
 * [UDDL Query Language](https://github.com/Epistimis/UDDL-Query-Language) implements Chapter 6 of that spec.
+
 To properly understand those implementations, you'll want to read chapters 2 & 3 of the spec as well.
 
 FACE - Appendix J
 * [FACE](https://github.com/Epistimis/FACE) implements Meta-Packages face.uop & face.integration (J.2, J.5, J.6, J.7)
 * [FACE Template Language](https://github.com/Epistimis/FACE-Template-Language) implements the Data Architecture Template Specification (J.3, J.4)
-We will also incorporate Safety and Security (Chapters 5,6)
 
-The IDL Bindings described in Appendix J.8 and Appendix K apply to both UDDL and FACE. Read the legend at the beginning of the appendix and then 
-search by the classname (as used in the FACE/UDDL specs, not the classname as implemented in Epistimis' code) to find relevant binding rules.
+
+The IDL Bindings described in the FACE Spec Appendix J.8 and Appendix K apply to both UDDL and FACE. Read the legend at the beginning of 
+the appendix and then search by the classname (as used in the FACE/UDDL specs, not the classname as implemented in Epistimis' code) to 
+find relevant binding rules.
 
 Note that the FACE Reference Implementation Guide should also be referenced. When it is published, a link to it will be provided here.
 
@@ -35,23 +37,32 @@ some minor modifications to OCL. It does not use the official .ecore model thoug
 than that, it should be functionally equivalent.
 
 The UDDL Query and FACE Template grammars are the same as the spec - those are isolated in `com.epistimis.uddl.query.*` and `com.epistimis.face.template.*` respectively.
-Note also that the syntax used in the `com.epistimis.uddl.*` and `com.epistimis.face.*` projects is Epistimis` alone - it is not part of the 'official' 
+The syntax used in the `com.epistimis.uddl.*` and `com.epistimis.face.*` projects is Epistimis` alone - it is not part of the 'official' 
 UDDL spec.  The syntax choices in these projects are based on following philosophy:
+
+# Motivational Overview - Why These Tools?
+*Learning to program is an unnatural act. It requires the novice to codify their notions of specification and process, to acquire an understanding of abstractions for which they may have no prior referents, and to express these concepts in a formal style of language they have never previously encountered. In other words, it is like trying to alter their belief system by quoting theoretical philosophy to them in hieroglyphics. (McIver & Conway)*
+
+If learning to program is hard, learning to model is both paradoxically easier and harder. It is easier because much of the detail required by programming languages need not be included. Harder because, done properly, it is no less formal and thus requires the modeler understand the problem well enough to know what can be left out.
+
+Modeling is often associated with pictures. Many companies with vested interests have deliberately conflated these two over the years. However, modeling is solely about identifying appropriate abstractions and recording them in a way that will help both communicate those concepts to others and, ideally, be useful in creating the systems that actually employ these concepts (by, for example, generating software from the model).  How the model is represented visually is independent of its content so long as the visual representation can capture and/or express the appropriate concepts accurately. Further, because the content is independent of its representation, it is possible to have multiple representations of the same information, with each available for use where most appropriate. The most obvious example is this: typing text when notating a simple concept such as A -> B is typically much faster than drawing a diagram to represent the same information. On the other hand, complex relationships are often easier to understand if we can see a picture tying related objects together with visual cues. Ideally, you should be able to select the format you use for recording information independently of the information to be recorded and independently of the presentation format used to communicate. Epistimis Modeling Toolkit (EMT) is the tool that lets you do that.
+
+EMT is a collection of tools that give you, the user, the ability to create FACE conformant models in a textual syntax that is easy to learn and understand and fast to use. You can also create models graphically, or create them textually and view them graphically.  In addition, the tool supports code generation and the ability to exchange work with other XMI compliant tools like Enterprise Architect. 
 
 # Notation Overview
 ## Syntactic Principles
-1. Predictability is highly desirable because it is easier for people to remember. This means:
+1. Predictability is highly desirable because it is easier for people to remember fewer mental rules. This means:
 * Use familiar paradigms where possible - but only if used in the same way. E.g., '{' and '}' are used for scoping just as they are in languages 
 like C++ and Java. If there is a reason to use something 'non-standard', it will be explained.
-* Use existing paradigms wherever possible. The standard notation below attempts to do that.
-* Where you can't mimic existing paradigms, do what is 'natural' - notation should be easy to figure out or, barring that, easy to understand once explained.
-* Be consistent in terminology and organization. For example, wherever there is a 'realizes' attribute it is placed immediately before the attribute set.
+* Where you can't mimic existing paradigms, do what is 'natural' - notation should be easy to figure out or, barring that, easy to understand once explained. 
+* Be consistent in terminology and organization. For example, wherever there is a 'realizes' attribute it is placed immediately before the attribute set. 
 
 2. Be succinct - every keystroke counts. Succinctness trumps predictability when the result is still easy to understand. 
-Most of the keywords chosen are abbreviations of their names in the UDDL spec.
-The most obvious case of this is the use of '{' and '}' These are used only when the object has attributes beyond ElementAttr or 
-CharacteristicAttr and 'realizes'. They may not be used in some of these remaining cases if there is a more succinct way of 
-representing the information that is still consistent in some sense. 
+E.g. most of the keywords chosen are abbreviations of their names in the UDDL spec.
+
+  * The most obvious case of this is the use of '{' and '}' These are used only when the object has attributes beyond ElementAttr or 
+  CharacteristicAttr and 'realizes'. They may not be used in some of these remaining cases if there is a more succinct way of 
+  representing the information that is still consistent in some sense. 
 
   * In the same way, ';' is typically used to denote the end of an object definition. It won't be used for things like CDM, LDM, PDM 
   because these are just named collections of other objects. Similarly, for objects that are always composed into something else, ';' will 
@@ -72,10 +83,14 @@ Epistimis implements the above goals as follows:
 The Notation Specifics table lists grammar labels and the specific character sequences they convert to. Every time you see one of the labels in a grammar rule below, that means you should type the notation character sequence for that label. For pairs of labels (e.g. LIST_START and LIST_END), the notation cell for that concept shows the two character sequences separated by a space. Using these labels in the subsequent grammar rules is meant to ensure that the appropriate concept is communicated in the grammar rules *and* that the rules implement the concepts in a consistent way. 
 
 -->
-1. Parentheses are used in the grammar rules below for grouping. A vertical bar ‘|’ inside the parentheses means that the things on either side of 
-the vertical bar are different options for what to type. The closing parenthesis may be followed by either ‘?’,’*’, or ‘+’. Each of these indicates 
-how many times what is inside the parentheses can be entered: ‘?’ means 0 or 1 times; ‘*’ means 0 or more times; ‘+’ means 1 or more times. 
-If none of these is specified, it means the preceding grammar element must be entered 1 time. For more details, see the [XText grammar doc](https://www.eclipse.org/Xtext/documentation/301_grammarlanguage.html#syntax)
+1. Epistimis uses XText grammars as the basis for tooling. Per the [XText grammar doc](https://www.eclipse.org/Xtext/documentation/301_grammarlanguage.html#syntax): 
+* Parentheses are used in grammar rules for grouping. 
+* A vertical bar ‘|’ inside the parentheses means that the things on either side of the vertical bar are alternatives. 
+* The closing parenthesis may be followed by either ‘?’,’\*’, or ‘+’. Each of these indicates 
+how many times what is inside the parentheses can be entered: ‘?’ means 0 or 1 times; ‘\*’ means 0 or more times; ‘+’ means 1 or more times. 
+If none of these is specified, it means the preceding grammar element must be present exactly 1 time. 
+
+For more details, see the [XText grammar doc](https://www.eclipse.org/Xtext/documentation/301_grammarlanguage.html#syntax)
 
 To insure consistency in the rules, the following conventions are used:
 1. All optional lists (a list that can contain 0 or more elements) are themselves optional. If you aren’t going to put anything in the list, you 
