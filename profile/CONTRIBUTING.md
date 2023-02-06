@@ -29,8 +29,7 @@ If you've noticed a bug or have a feature request, [make one][new issue]! It's
 generally best if you get confirmation of your bug or approval for your feature
 request this way before starting to code.
 
-If you have a general question about these tools, you can post it on [Stack
-Overflow], the issue tracker is only for bugs and feature requests.
+If you have a general question about these tools, you can post it on our [website Q/A], the issue tracker is only for bugs and feature requests.
 
 ### Fork & create a branch
 
@@ -135,7 +134,6 @@ Maintainers need to do the following to push out a release:
 -->
 
 [chandler]: https://github.com/mattbrictson/chandler#2-configure-credentials
-[Stack Overflow]: http://stackoverflow.com/questions/tagged/epistimis
 [new issue]: https://github.com/epistimis/com.epistimis.uddl.parent/issues/new
 [fork an Epistimis repo]: https://help.github.com/articles/fork-a-repo
 [make a pull request]: https://help.github.com/articles/creating-a-pull-request
