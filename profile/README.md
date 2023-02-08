@@ -62,8 +62,8 @@ like C++ and Java. If there is a reason to use something 'non-standard', it will
 2. Be succinct - every keystroke counts. Succinctness trumps predictability when the result is still easy to understand. 
 E.g. most of the keywords chosen are abbreviations of their names in the UDDL spec.
 
-  * The most obvious case of this is the use of '{' and '}' These are used only when the object has attributes beyond ElementAttr or 
-  CharacteristicAttr and 'realizes'. They may not be used in some of these remaining cases if there is a more succinct way of 
+  * The most obvious case of this is the use of '{' and '}' These are used only when the object has attributes beyond Element attributes or 
+  Characteristic attributes and 'realizes'. They may not be used in some of these remaining cases if there is a more succinct way of 
   representing the information that is still consistent in some sense. 
 
   * In the same way, ';' is typically used to denote the end of an object definition. It won't be used for things like CDM, LDM, PDM 
@@ -98,8 +98,8 @@ To insure consistency in the rules, the following conventions are used:
 1. All optional lists (a list that can contain 0 or more elements) are themselves optional. If you aren’t going to put anything in the list, you 
 don’t add the '[' and ']' either. This minimizes visual clutter. 
 
-1. Cross references between parts of a model are created by using the name/ rolename of the referenced model element. The use of ‘ID’ in ElementAttr 
-and rolename in CharacteristicAttr indicates where the name / rolename is defined for a model element.  Italics in rules indicate where to 
+1. Cross references between parts of a model are created by using the name/ rolename of the referenced model element. The use of ‘ID’ in Elements 
+and rolename in Characteristics indicates where the name / rolename is defined for a model element.  Italics in rules indicate where to 
 include a cross reference. You can either type in the name of the referent or use CTRL-Spacebar to bring up a list of choices from which to select.
 If the ID is insufficient to uniquely identity the referent, fully or partially qualified names should be used. Fully qualified names are simply the names of all the enclosing elements in sequence from outermost to the referent, separated by ‘.’. A partially qualified name simply includes a subsequence of those names that does not extend all the way back to the outermost element. If you use CTRL-Space to select a referent from a list of choices, the tool will typically insert partially qualified names that start with the closest common ancestor between the referent and the reference.
 
