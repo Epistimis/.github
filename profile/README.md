@@ -26,12 +26,18 @@ FACE - Appendix J
 * [FACE](https://github.com/Epistimis/FACE) implements Meta-Packages face.uop & face.integration (J.2, J.5, J.6, J.7)
 * [FACE Template Language](https://github.com/Epistimis/FACE-Template-Language) implements the Data Architecture Template Specification (J.3, J.4)
 
-
 The IDL Bindings described in the FACE Spec Appendix J.8 and Appendix K apply to both UDDL and FACE. Read the legend at the beginning of 
 the appendix and then search by the classname (as used in the FACE/UDDL specs, not the classname as implemented in Epistimis' code) to 
 find relevant binding rules.
 
 Note that the FACE Reference Implementation Guide should also be referenced. When it is published, a link to it will be provided here.
+
+### A Note about dependencies
+* [UDDL Query Language](https://github.com/Epistimis/UDDL-Query-Language) has no dependencies on any of the other Epistimis repos
+* [UDDL](https://github.com/Epistimis/UDDL) [QueryProcessor](https://github.com/Epistimis/UDDL/blob/master/com.epistimis.uddl/src/com/epistimis/uddl/generator/QueryProcessor.java) depends on [UDDL Query Language](https://github.com/Epistimis/UDDL-Query-Language)
+* Currently, [FACE Template Language](https://github.com/Epistimis/FACE-Template-Language) is not integrated. When integrated, it will depend on the UDDL QueryProcessor.
+* [FACE](https://github.com/Epistimis/FACE) depends on [UDDL](https://github.com/Epistimis/UDDL) throughout, starting with `FACE.xtext` building on `UDDL.xtext`. When [FACE Template Language](https://github.com/Epistimis/FACE-Template-Language) is integrated, [FACE](https://github.com/Epistimis/FACE) template processing will depend on the [FACE Template Language](https://github.com/Epistimis/FACE-Template-Language). 
+
 
 ## Epistimis modifications
 Epistimis code is based on these specs but is 'unofficial'. It does not use the namespace/packaging from the original spec which results in 
