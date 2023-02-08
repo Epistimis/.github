@@ -35,8 +35,8 @@ Note that the FACE Reference Implementation Guide should also be referenced. Whe
 
 ## Epistimis modifications
 Epistimis code is based on these specs but is 'unofficial'. It does not use the namespace/packaging from the original spec which results in 
-some minor modifications to OCL. It does not use the official .ecore model though the generated model should be compatible with it. Other 
-than that, it should be functionally equivalent.
+some minor modifications to OCL. It does not use the official .ecore model though the generated model should be compatible with it. In addition, 
+enumerations have been extended to support hierarchies (because this makes simple taxonomies easy to implement). Other than that, it should be functionally equivalent.
 
 The UDDL Query and FACE Template grammars are the same as the spec - those are isolated in `com.epistimis.uddl.query.*` and `com.epistimis.face.template.*` respectively.
 The syntax used in the `com.epistimis.uddl.*` and `com.epistimis.face.*` projects is Epistimis` alone - it is not part of the 'official' 
