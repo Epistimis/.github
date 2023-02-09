@@ -127,14 +127,14 @@ it may appear on a subsequent line by itself
 
 # Getting started
 
-See the [Getting Started Guide](GETTING-STARTED.md) for info on setting up an Eclipse development environment. It will take you all the way to a working demo.
+See the [Getting Started Guide](profile/GETTING-STARTED.md) for info on setting up an Eclipse development environment. It will take you all the way to a working demo.
 
 # Contributing
-See [Contributing](CONTRIBUTING.md) for info on how to contribute. See [Code of Conduct](CODE_OF_CONDUCT.md) for community standards.
+See [Contributing](profile/CONTRIBUTING.md) for info on how to contribute. See [Code of Conduct](profile/CODE_OF_CONDUCT.md) for community standards.
 
 
 # Security and Bug Reports
-For most bugs, create a GitHub issue. If you believe you have found a security issue, see [Security](SECURITY.md) for reporting instructions.
+For most bugs, create a GitHub issue. If you believe you have found a security issue, see [Security](profile/SECURITY.md) for reporting instructions.
 
 # User Doc
 We need user Doc! A draft will be provided soon in Markdown and linked here. Stay tuned!
