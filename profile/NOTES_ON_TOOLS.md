@@ -13,6 +13,8 @@ is overridden.
 
 In all other cases, just use Java. And you may want to use Java even in some of these cases.
 
+Note that you can call back and forth between XTend and Java code. If you want to use Dynamic Dispatch from Java code, you must call into a non dynamic XTend method and then use that XTend method to call into the dynamic dispatch code. Just use a one line method with a different name to do this.
+
 NOTE: XTend is converted to Java in an `xtend-gen` directory of the same project in case 
 want to see how it is converted. Never edit or commit to git anything from an `xtend-gen` directory. It will ***always*** be overwritten the next time
 the code is compiled.
