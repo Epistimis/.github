@@ -138,7 +138,7 @@ For most bugs, create a GitHub issue. If you believe you have found a security i
 
 # User Doc
 
-There is a [Data Modelling Guide](profile/FACE%20Data%20Modelling%20Guide.html) available. This is a draft guide. It is too large for Github to display. You can clone the .github repo and read it.
+There is a draft Data Modelling Guide available however it is too large for Github to display (hence no link). You can clone the .github repo and read it. It's in the profile subdirectory there.
 
 We need more user Doc! A draft will be provided soon in Markdown and linked here. Stay tuned!
 
