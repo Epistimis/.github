@@ -76,7 +76,9 @@ then right click in the edit window to bring up the context menu and select Run 
 
 You should see results in the Console pane similar to those in the screenshot. ***If you do not, create an issue and include the content of your console window so I can figure out what happened***
 
-If everything completed successfully, you will be able to launch a second copy of Eclipse that will run the code you just generated. 
+If everything completed successfully, the Problems pane will not show any Errors (Warnings and Infos are expected). If this is not the case, then create an issue and post a screenshot of the errors you still have. Attach a copy of the Console log output to the issue.
+
+If  you were successful, you will be able to launch a second copy of Eclipse that will run the code you just generated. 
 To do that select Run -> Run Configurations. You will see something like this:
 
 ![Screenshot 2023-01-14 at 5 50 38 PM](https://user-images.githubusercontent.com/120406738/212510514-a8ee4b8a-4867-455a-93f2-66e6e4f6910a.png)
@@ -85,14 +87,16 @@ Select Eclipse Application and then click the 'New' icon (the leftmost icon in t
 You can use the defaults (rename it if you want) - just click **Run**. This will launch a second Eclipse. 
 
 In that second Eclipse, 
-1. create a new blank project (File -> New -> Project or File->New->Other->General->Project) and  click **Next**. 
+1. create a new blank (not Java) project (File -> New -> Project or File->New->Other->General->Project)  and  click **Next**. 
 1. Give it a name and click **Finish**. 
-1. Then copy the following file from the first Eclipse to the new project: 
+1. Then copy (do not link) the following file from the first Eclipse to the new project: 
 ```
 /com.epistimis.uddl.tests/src/com/epistimis/uddl/tests/UDDL_SDM_Min.uddl
 ```
-1. Open the UDDL file in the new project.
-1. Select the edit window, and use Cmd-Shift-F on Mac or Alt-Shift-F on Windows to format the file. 
+1. Open the UDDL file in the new project. Eclipse should ask if you want to convert this to an XText project - select 'Yes'. The UDDL file should be editable (not greyed out). If it is not editable, then create an Issue and attach a screenshot of the second Eclipse, a screenshot of the first Eclipse showing the Error pane content, and a text file with the first Eclipse console log output.
+1. If the UDDL is editable, you should also see an outline in the Outline pane that shows the structure of the UDDL file. If you do not, the create an Issue and attach screenshots and a console log file.
+2. If the UDDL file is editable and you see an Outline, then select the edit window, and use Cmd-Shift-F on Mac or Alt-Shift-F on Windows to format the file. 
+
 
 ## Modifying the code
 
