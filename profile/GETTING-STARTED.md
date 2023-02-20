@@ -38,7 +38,7 @@ you can put it anywhere you want. ***I strongly recommend putting it in the Ecli
 do not do this, you will discover that when you edit files, they don't get stored where you think they should be (in the directory where the repo is). Instead, they
 can get stored in the workspace. This will cause all sorts of mysterious build problems because the code that is being built won't be the code you are looking at.
 
-Depending on what you intend to modify, you may need to pull more than one repo. See the README for the list of dpendencies.
+Depending on what you intend to modify, you may need to pull more than one repo. See the README for the list of dependencies.
 
 After you pull repos, you need to build the existing code. Naturally, you should build repos in their dependency order.
 In Eclipse:
@@ -67,7 +67,12 @@ If you do not, click the **Add Library...** button to get:
 
 Select **Plug-in Dependencies** in the dialog, then click **Next** and **Finish**
 
-3. Open /com.epistimis.uddl/src/com/epistimis/uddl/Uddl.xtext (see screenshot)
+3. Open the xtext file for each repo you downloaded. They are:
+* UDDL: /com.epistimis.uddl/src/com/epistimis/uddl/Uddl.xtext (see screenshot)
+* UDDL Query: /com.epistimis.uddl.query/src/com/epistimis/uddl/query/Query.xtext
+* FACE: /com.epistimis.face/src/com/epistimis/face/Face.xtext
+* FACE Templates: /com.epistimis.face.template/src/com/epistimis/face/template/Template.xtext
+
 ![Screenshot 2023-01-14 at 5 42 21 PM](https://user-images.githubusercontent.com/120406738/212508222-bf4b4003-a1e4-4c32-b1e8-067ce2daed04.png)
 
 then right click in the edit window to bring up the context menu and select Run As -> Generate XText Artifacts
