@@ -76,6 +76,8 @@ then right click in the edit window to bring up the context menu and select Run 
 
 You should see results in the Console pane similar to those in the screenshot. ***If you do not, create an issue and include the content of your console window so I can figure out what happened***
 
+## Start the Editor you just created
+
 If everything completed successfully, the Problems pane will not show any Errors (Warnings and Infos are expected). If this is not the case, then create an issue and post a screenshot of the errors you still have. Attach a copy of the Console log output to the issue.
 
 If  you were successful, you will be able to launch a second copy of Eclipse that will run the code you just generated. 
