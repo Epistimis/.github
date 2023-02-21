@@ -2,7 +2,7 @@
 
 
 ## Installing Relevant Open Source Tools.
-1. Install a current version of the Java JDK. You can download [Temurin, an open source JDK from this page](https://www.eclipse.org/downloads/).
+1. Install a current version of the Java JDK. You can download [Temurin, an open source JDK from this page](https://www.eclipse.org/downloads/). Once Java is installed, set `JAVA_HOME` to reference the Java you installed.
 2. Install [Gradle](https://gradle.org). There is a version installed with Eclipse but it isn't current - and you'll need the current version.
 3. Install [Eclipse](https://www.eclipse.org). Download the installer - you will need to click through several screens to pick the installer appropriate for you. You should be downloading Eclipse IDE 2022-12. 
 When you start the installer, select **Eclipse IDE for Java and DSL Developers** (see screenshot)
