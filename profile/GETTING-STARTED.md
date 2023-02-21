@@ -31,6 +31,11 @@ Then click **Add** on that dialog and **Apply and Close**. That defines the feat
 ![Screenshot 2023-01-14 at 2 36 14 PM](https://user-images.githubusercontent.com/120406738/212500196-f75f14c4-b176-4936-a371-06a52a319d6b.png)
 
 4. Select **XText2Langium** in the `Work with` field, then select XText2Langium Generator Fragment as in the screenshot. Then select **Finish** to install it. If you cannot click on **Finish**, select **Next** to bring up the next dialog from which you can select **Finish**
+5. Open Eclipse Preferences and select Gradle. Make sure the version of Gradle you installed is selected (otherwise it will default to the version installed with Eclipse):
+
+![Screenshot 2023-02-21 at 3 46 18 PM](https://user-images.githubusercontent.com/120406738/220485183-04620b53-a6cf-4343-b88d-62d9e61b5cdb.png)
+
+Then click 'Apply and Close' on that dialog.
 
 ## Working on this code
 When you opened Eclipse, you created a workspace. That workspace is where Eclipse expects the code you edit to be located. When you pull this repo from Github,
