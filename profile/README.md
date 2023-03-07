@@ -7,7 +7,7 @@ As part of our commitment to quality and the Open Source Community, we want to g
 
 The foundation of Epistimis' tools is built on standards originally developed for the US Military 
 (Yes, we are military grade!) Those standards were originally one (FACE), now split into 2 parts:
-* UDDL (Universal Data Definition Language) - specification available [here](https://publications.opengroup.org/standards/face/c198)
+* UDDL (Universal Data Definition Language) - specification available [here](https://publications.opengroup.org/standards/face/c231)
 * FACE (Future Airborne Capability Environment) - specification available [here](https://publications.opengroup.org/standards/face/c207)
 
 These can be downloaded for free after you create an OpenGroup login.
