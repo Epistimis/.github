@@ -3,7 +3,7 @@
 We supply tools to developers to enable them to design privacy in from the very beginning.  These tools enable developers, product managers, CISOs, inside 
 counsel and outside counsel to all work together to reduce risk of violating privacy, discrimination and other laws.
 
-As part of our commitment to quality and the Open Source Community, we want to give back. So the foundation of our tools is open sourced here in 4 repos:
+The foundation of our tools is here in 4 repos:
 
 The foundation of Epistimis' tools is built on standards originally developed for the US Military 
 (Yes, we are military grade!) Those standards were originally one (FACE), now split into 2 parts:
