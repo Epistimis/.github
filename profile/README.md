@@ -41,7 +41,7 @@ This repo uses [Langium](https://langium.org). It was generated using [XText2Lan
 What does that mean? It means that the JS version is in a more experimental state than then Java side. It should eventually have all the same capability - but the original work is being done first in Java.
 
 Everything above provides the data modeling / data flow modeling foundation. To that we add
-* [Data-Flow-Graphics](https://github.com/Epistimis/Data-Flow-Graphics) - This provides [Sirius](https://www.eclipse.org/sirius/) graphics to display data flow models. While this repo refers to privacy, there is nothing about it that is privacy specific - it may be moved/renamed to reference FACE, the layer it depends on. A lot of work needs to be done here. If you're interested in graphics, this is the repo you want to work on.
+* [Data-Flow-Graphics](https://github.com/Epistimis/Data-Flow-Graphics) - This provides [Sirius](https://www.eclipse.org/sirius/) graphics to display data flow models. It references FACE, the layer it depends on. A lot of work needs to be done here. If you're interested in graphics, this is the repo you want to work on.
 
 The very last layer is privacy specific:
 * [Privacy](https://github.com/Epistimis/Privacy) - This is the new part. This changes rapidly. Tasks associated with this repo will likely change rapidly - so don't attempt tasks here unless you confer with Steve Hickman beforehand. Otherwise, you risk doing work that will just be thrown away.
