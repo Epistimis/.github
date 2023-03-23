@@ -72,7 +72,15 @@ If learning to program is hard, learning to model is paradoxically both easier a
 
 Modeling is often associated with pictures. Many companies with vested interests have deliberately conflated these two over the years. However, modeling is solely about identifying appropriate abstractions and recording them in a way that will help both communicate those concepts to others and, ideally, be useful in creating the systems that actually employ these concepts (by, for example, generating software from the model).  How the model is represented visually is independent of its content so long as the visual representation can capture and/or express the appropriate concepts accurately. Further, because the content is independent of its representation, it is possible to have multiple representations of the same information, with each available for use where most appropriate. The most obvious example is this: typing text when notating a simple concept such as A -> B is typically much faster than drawing a diagram to represent the same information. On the other hand, complex relationships are often easier to understand if we can see a picture tying related objects together with visual cues. Ideally, you should be able to select the format you use for recording information independently of the information to be recorded and independently of the presentation format used to communicate. Epistimis Modeling Toolkit (EMT) is the tool that lets you do that.
 
-EMT is a collection of tools that give you, the user, the ability to create FACE conformant models in a textual syntax that is easy to learn and understand and fast to use. You can also create models graphically, or create them textually and view them graphically.  In addition, the tool supports code generation and the ability to exchange work with other XMI compliant tools like Enterprise Architect. 
+EMT is a collection of tools that give you, the user, the ability to create FACE conformant models in a textual syntax that is easy to learn and understand and fast to use. You can also create models graphically, or create them textually and view them graphically.  In addition, the tool supports code generation and the ability to exchange work with other XMI compliant tools like Enterprise Architect.
+
+More importantly, EMT can evaluate your conceptual models to determine if they conform to current and/or planned privacy laws. These laws can be evaluated based on the jurisdictions where you operate or intend to operate. This evaluation is done at the conceptual level - the level at which the law is written. It does not need implementation detail. (That detail is needed solely if you either need to reverse engineer existing code ***or*** want to generate correct-by-construction code from your model). 
+
+For those who choose to generate code from these models, you get the following bonus benefits:
+1. All code is known to be conformant to privacy law - no code will be generated if any rules are being 
+violated.
+1. You can change implementation technologies by updating the model options in most cases or, in some cases, by updating the code generator.
+1. As the law evolves, code generation will be updated to reflect legal requirements, so users can easily update implementation to reflect current law.
 
 # Notation Overview
 ## Syntactic Principles
