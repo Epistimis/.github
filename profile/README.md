@@ -32,12 +32,29 @@ find relevant binding rules.
 
 Note that the FACE Reference Implementation Guide should also be referenced. When it is published, a link to it will be provided here.
 
+All the above repos are Java based. They use the [XText](https://www.eclipse.org/xtend/documentation/index.html) / [XTend](https://www.eclipse.org/xtend/) which is built on top of the the [Eclipse Modeling Framework](https://www.eclipse.org/modeling/emf/). [Some](https://www.typefox.io/language-engineering/) believe that using XText can be too heavy weight for use in some cases (e.g. web base applications). So, we also have a JS/TS alternative in this repo:
+
+* [universal-data-definition-language](https://github.com/Epistimis/universal-data-definition-language) 
+
+This repo uses [Langium](https://langium.org). It was generated using [XText2Langium](https://github.com/TypeFox/xtext2langium). You'll note that Langium is newer than XText. And Xtext2Langium is even newer than that. As of this writing, I'm the only person who has submitted issues for it other than its own developers. It isn't yet completely usable for something as complex as this. There are workarounds - talk to Steve Hickman to understand this better. If you want to work in JS/TS, this is the repo you'll work on.
+
+What does that mean? It means that the JS version is in a more experimental state than then Java side. It should eventually have all the same capability - but the original work is being done first in Java.
+
+Everything above provides the data modeling / data flow modeling foundation. To that we add
+* [Data-Flow-Graphics](https://github.com/Epistimis/Data-Flow-Graphics) - This provides [Sirius](https://www.eclipse.org/sirius/) graphics to display data flow models. While this repo refers to privacy, there is nothing about it that is privacy specific - it may be moved/renamed to reference FACE, the layer it depends on. A lot of work needs to be done here. If you're interested in graphics, this is the repo you want to work on.
+
+The very last layer is privacy specific:
+* [Privacy](https://github.com/Epistimis/Privacy) - This is the new part. This changes rapidly. Tasks associated with this repo will likely change rapidly - so don't attempt tasks here unless you confer with Steve Hickman beforehand. Otherwise, you risk doing work that will just be thrown away.
+
+
+
 ### A Note about dependencies
 * [UDDL Query Language](https://github.com/Epistimis/UDDL-Query-Language) has no dependencies on any of the other Epistimis repos
 * [UDDL](https://github.com/Epistimis/UDDL) [QueryProcessor](https://github.com/Epistimis/UDDL/blob/master/com.epistimis.uddl/src/com/epistimis/uddl/generator/QueryProcessor.java) depends on [UDDL Query Language](https://github.com/Epistimis/UDDL-Query-Language)
 * Currently, [FACE Template Language](https://github.com/Epistimis/FACE-Template-Language) is not integrated. When integrated, it will depend on the UDDL QueryProcessor.
 * [FACE](https://github.com/Epistimis/FACE) depends on [UDDL](https://github.com/Epistimis/UDDL) throughout, starting with `FACE.xtext` building on `UDDL.xtext`. When [FACE Template Language](https://github.com/Epistimis/FACE-Template-Language) is integrated, [FACE](https://github.com/Epistimis/FACE) template processing will depend on the [FACE Template Language](https://github.com/Epistimis/FACE-Template-Language). 
-
+* [Data-Flow-Graphics](https://github.com/Epistimis/Data-Flow-Graphics) depends on [FACE](https://github.com/Epistimis/FACE).
+* [Privacy](https://github.com/Epistimis/Privacy) depends on [FACE](https://github.com/Epistimis/FACE).
 
 ## Epistimis modifications
 Epistimis code is based on these specs but is 'unofficial'. It does not use the namespace/packaging from the original spec which results in 
