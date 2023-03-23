@@ -36,7 +36,7 @@ All the above repos are Java based. They use the [XText](https://www.eclipse.org
 
 * [universal-data-definition-language](https://github.com/Epistimis/universal-data-definition-language) 
 
-This repo uses [Langium](https://langium.org). It was generated using [XText2Langium](https://github.com/TypeFox/xtext2langium). You'll note that Langium is newer than XText. And Xtext2Langium is even newer than that. As of this writing, I'm the only person who has submitted issues for it other than its own developers. It isn't yet completely usable for something as complex as this. There are workarounds - talk to Steve Hickman to understand this better. If you want to work in JS/TS, this is the repo you'll work on.
+This repo uses [Langium](https://langium.org). It was generated using [XText2Langium](https://github.com/TypeFox/xtext2langium). You'll note that Langium is newer than XText. And Xtext2Langium is even newer than that. As of this writing, I'm the only person who has submitted issues for Xtext2Langium other than its own developers. It isn't yet completely usable for something as complex as what we're doing here. There are workarounds - talk to Steve Hickman to understand this better. If you want to work in JS/TS, this is the repo you'll work on.
 
 What does that mean? It means that the JS version is in a more experimental state than then Java side. It should eventually have all the same capability - but the original work is being done first in Java.
 
