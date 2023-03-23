@@ -57,7 +57,7 @@ The very last layer is privacy specific:
 * [Privacy](https://github.com/Epistimis/Privacy) depends on [FACE](https://github.com/Epistimis/FACE).
 
 ## Epistimis modifications
-Epistimis code is based on these specs but is 'unofficial'. It does not use the namespace/packaging from the original spec which results in 
+Epistimis code is based on UDDL/FACE specs but is 'unofficial'. It does not use the namespace/packaging from the original spec which results in 
 some minor modifications to OCL. It does not use the official .ecore model though the generated model should be compatible with it. In addition, 
 enumerations have been extended to support hierarchies (because this makes simple taxonomies easy to implement). Other than that, it should be functionally equivalent.
 
