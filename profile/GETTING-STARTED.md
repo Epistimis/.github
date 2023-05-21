@@ -5,7 +5,7 @@
 1. Install a current version of the Java JDK. You can download [Temurin, an open source JDK from this page](https://www.eclipse.org/downloads/). Once Java is installed, set `JAVA_HOME` to reference the Java you installed.
 2. Install [Gradle](https://gradle.org). There is a version installed with Eclipse but it isn't current - and you'll need the current version. It should be version 7.6. Note that the current version is 8.x. You can install the current version but you'll need to make sure you select v 7.6 in Eclipse later on.
 3. Make sure Gradle can find Java. See the [Troubleshooting Guide](TROUBLESHOOTING.md) for instructions on what to do.
-4. Install [Eclipse](https://www.eclipse.org). Download the installer - you will need to click through several screens to pick the installer appropriate for you. You should be downloading Eclipse IDE 2022-12. 
+4. Install [Eclipse](https://www.eclipse.org). Download the installer - you will need to click through several screens to pick the installer appropriate for you. You should be downloading the most recent version of Eclipse. 
 When you start the installer, select **Eclipse IDE for Java and DSL Developers** (see screenshot)
 
 ![EclipseInstallerDSLSelection](https://user-images.githubusercontent.com/120406738/212499267-b34101e8-d71d-4831-a633-ffe6302e990f.png)
