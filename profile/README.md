@@ -51,8 +51,8 @@ The very last layer is privacy specific:
 ### A Note about dependencies
 * [UDDL Query Language](https://github.com/Epistimis/UDDL-Query-Language) has no dependencies on any of the other Epistimis repos
 * [UDDL](https://github.com/Epistimis/UDDL) [QueryProcessor](https://github.com/Epistimis/UDDL/blob/master/com.epistimis.uddl/src/com/epistimis/uddl/generator/QueryProcessor.java) depends on [UDDL Query Language](https://github.com/Epistimis/UDDL-Query-Language)
-* Currently, [FACE Template Language](https://github.com/Epistimis/FACE-Template-Language) is not integrated. When integrated, it will depend on the UDDL QueryProcessor.
-* [FACE](https://github.com/Epistimis/FACE) depends on [UDDL](https://github.com/Epistimis/UDDL) throughout, starting with `FACE.xtext` building on `UDDL.xtext`. When [FACE Template Language](https://github.com/Epistimis/FACE-Template-Language) is integrated, [FACE](https://github.com/Epistimis/FACE) template processing will depend on the [FACE Template Language](https://github.com/Epistimis/FACE-Template-Language). 
+* Currently, [FACE Template Language](https://github.com/Epistimis/com.epistimis.face.templ.parent) is not integrated. When integrated, it will depend on the UDDL QueryProcessor.
+* [FACE](https://github.com/Epistimis/FACE) depends on [UDDL](https://github.com/Epistimis/UDDL) throughout, starting with `FACE.xtext` building on `UDDL.xtext`. When [FACE Template Language](https://github.com/Epistimis/com.epistimis.face.templ.parent) is integrated, [FACE](https://github.com/Epistimis/FACE) template processing will depend on the [FACE Template Language](https://github.com/Epistimis/com.epistimis.face.templ.parent). 
 * [Data-Flow-Graphics](https://github.com/Epistimis/Data-Flow-Graphics) depends on [FACE](https://github.com/Epistimis/FACE).
 * [Privacy](https://github.com/Epistimis/Privacy) depends on [FACE](https://github.com/Epistimis/FACE).
 
