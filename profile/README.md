@@ -24,7 +24,7 @@ To properly understand those implementations, you'll want to read chapters 2 & 3
 
 FACE - Appendix J
 * [FACE](https://github.com/Epistimis/FACE) implements Meta-Packages face.uop & face.integration (J.2, J.5, J.6, J.7)
-* [FACE Template Language](https://github.com/Epistimis/FACE-Template-Language) implements the Data Architecture Template Specification (J.3, J.4)
+* [FACE Template Language](https://github.com/Epistimis/com.epistimis.face.templ.parent) implements the Data Architecture Template Specification (J.3, J.4)
 
 The IDL Bindings described in the FACE Spec Appendix J.8 and Appendix K apply to both UDDL and FACE. Read the legend at the beginning of 
 the appendix and then search by the classname (as used in the FACE/UDDL specs, not the classname as implemented in Epistimis' code) to 
